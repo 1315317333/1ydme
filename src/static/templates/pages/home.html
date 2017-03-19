@@ -1,0 +1,184 @@
+<div ng-controller="homeCtrl">
+	<nav class="carousel slide banner" id="myCarousel" style="width:100%;">
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="item active"><img src="static/img/banner1.png" height="450"></div>
+				<div class="item"><img src="static/img/banner2.png"></div>
+				<div class="item"><img src="static/img/banner3.png"></div>
+				<div class="item"><img src="static/img/banner4.png"></div>
+			</div>	
+				
+			<!--<a href="#myCarousel" data-slide="prev" class="carousel-controlleft">&lsaquo;</a>
+			<a href="#myCarousel" data-slide="next" class="carousel-controlright">&rsaquo;</a>-->
+		    <div class="side">
+				<ul>
+					<li style="display: block;"><a href="">2017新晃越野赛</a></li>
+					<li><a href="">让运动与众不同</a></li>
+					<li><a href="">全民运动</a></li>
+					<li><a href="">羽毛球</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="row hotac">
+				<h3 class="text-center"><span>热门运动</span></h3>
+				<p class="text-center">还等什么，快喊上小伙伴们运动吧</p>
+			</div>
+		</div>
+		<div class="container" style="margin-bottom: 30px;">
+			<ul class="row">
+				<li class="col-md-2 col-md-offset-1" ng-click="goSearch(1)"><img src="static/img/wq.png" alt="" /></li>
+				<li class="col-md-2" ng-click="goSearch(2)"><img src="static/img/ymq.png" alt="" /></li>
+				<li class="col-md-2" ng-click="goSearch(21)"><img src="static/img/ppq.png" alt=""/></li>
+				<li class="col-md-2" ng-click="goSearch(61)"><img src="static/img/lq.png" alt=""/></li>
+				<li class="col-md-2" ng-click="goSearch(23)"><img src="static/img/zqiu.png" alt=""/></li>
+			</ul>
+		</div>
+		<div class="container boo">
+			<div class="row">
+				<div class="col-md-5 phone">
+					<div><img src="static/img/cz.png" alt="" /></div>
+					<ul>
+						<li style="display: block;"><img src="static/img/11.png" alt="" /></li>
+						<li><img src="static/img/22.png" alt="" /></li>
+						<li><img src="static/img/33.png" alt="" /></li>
+						<li><img src="static/img/44.png" alt="" /></li>
+					</ul>
+				</div>
+				<div class="col-md-6 cg">
+					<div><img src="static/img/weixin.png" alt="" /><img src="static/img/app.png" alt="" /></div>
+					<ul>
+						<li style="display: block;"><img src="static/img/1.png" alt="" /></li>
+						<li><img src="static/img/2.png" alt="" /></li>
+						<li><img src="static/img/3.png" alt="" /></li>
+						<li><img src="static/img/4.png" alt="" /></li>
+					</ul>
+				</div>
+				<div class="col-md-1 qh">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid service">
+			<div class="row">		   
+				<div class="col-md-2" style="padding: 0;"><span>服务</span><small>service</small></div>
+				<div class="col-md-1" style="padding: 0;"><span style="">&gt;</span></div>
+				<div class="col-md-2" style="padding: 0;"><span>产品介绍</span><small>product description</small></div></div>
+				<div class="col-md-7" style="padding: 0;"><img src="static/img/img.png" alt="" style="width: 100%;"/></div>
+			</div>
+		</div>
+		<div class="container" style="margin-bottom: 20px;">
+			<div class="row">
+				<ul class="pt">
+					<li>
+						<div>
+							<h4>场馆预定平台</h4>
+							<p>随时随地的场馆运动筛选</p>
+						</div>
+						<a href="">立即订场&gt;&gt;</a>
+					</li>
+					<li>
+						<div>
+							<h4>场馆预定平台</h4>
+							<p>随时随地的场馆运动筛选</p>
+						</div>
+						<a href="">进入赛事 &gt;&gt;</a>
+					</li>
+					<li>
+						<div>
+							<h4>培训</h4>
+							<p>随时随地的场馆运动筛选</p>
+						</div>
+						<a href="">找培训&gt;&gt;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container-fluid list">
+			<ul class="row">
+				<li class="col-md-4"><img src="static/img/yh.png" alt="" /><h5>适合用户</h5><p>羽毛球馆、篮球馆、足球馆等各类场地项目。特别适合连锁型，地理位置分散，多项目的场馆</p></li>
+				<li class="col-md-4"><img src="static/img/ts.png" alt="" /><h5>主要特色</h5>
+					<p>价格低：系统免费使用，不花一分钱便可实现场馆管理信息化。</p>
+					<p>技术强：强大的技术开发团队，专业的实施维护团队。</p>
+					<p>业务精：丰富的行业经验，精确掌握场馆管理的每一个细节。</p>
+					<p>跨地域：无论在家还是在出差，都可以通过网络查看相关的营业数据。</p>
+					<p>易使用：功能简洁、实用、友好，基本上可以做到简单培训，就可以上手使用。</p>
+					<p>易维护：系统成熟、稳定，完全web页面操作，自动升级更新，无需维护人员</p>
+				</li>
+				<li class="col-md-4"><img src="static/img/gn.png" alt="" /><h5>功能介绍</h5><p>完善的场馆客户端操作，随时随地，场馆运动想练就练</p><p>强大的后端管理系统不仅是把场馆的信息放在平台上做信息共享，增加场馆的消费渠道，还可以帮场馆实现自身的信息化管理，提升管理效率和服务质量。</p></li>
+			</ul>
+		</div>
+		<div class="service container-fluid">
+			<div class="row">
+				<div class="col-md-7" style="padding: 0;"><img src="static/img/img1.png" alt="" style="width: 100%;"/></div>
+				<div class="col-md-2" style="padding: 0;"><span>合作伙伴</span><small>OUR PARTNER</small></div>
+				<div class="col-md-1" style="padding: 0;"><span style="">&gt;</span></div>
+				<div class="col-md-2" style="padding: 0;"><span>关于我们</span><small>ABOUT US</small></div>
+			</div>
+		</div>
+		<div class="container partner">
+			<div class="row">
+				<h2>合作伙伴</h2>
+				<p>OUR PARTNER</p>
+				<ul>
+					<li><img src="static/img/41.png" alt="" /></li>
+					<li><img src="static/img/42.png" alt="" /></li>
+					<li><img src="static/img/13.png" alt="" /></li>
+					<li><img src="static/img/14.png" alt="" /></li>
+					<li><img src="static/img/15.png" alt="" /></li>
+					<li><img src="static/img/16.png" alt="" /></li>
+					<li><img src="static/img/21.png" alt="" /></li>
+					<li><img src="static/img/22 (1).png" alt="" /></li>
+					<li><img src="static/img/23.png" alt="" /></li>
+					<li><img src="static/img/24.png" alt="" /></li>
+					<li><img src="static/img/25.png" alt="" /></li>
+					<li><img src="static/img/26.png" alt="" /></li>
+					<li><img src="static/img/43.png" alt="" /></li>
+					<li><img src="static/img/32.png" alt="" /></li>
+					<li><img src="static/img/33 (1).png" alt="" /></li>
+					<li><img src="static/img/34.png" alt="" /></li>
+					<li><img src="static/img/35.png" alt="" /></li>
+					<li><img src="static/img/36.png" alt="" /></li>
+				</ul>
+			</div>
+		</div>
+		<div class="container-fluid us">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>关于我们</h3>
+					<p>ABOUT US</p>
+					<p>欢迎来到“我要运动”，我们是一个致力于为广大运动爱好者提供方便快捷的场地、教练、培训等在线预订服务机互动交流平台</p>
+					<p>欢迎来到“我要运动”，我们是一个致力于为广大运动爱好者提供方便快捷的场地、教练、培训等在线预订服务机互动交流平台</p>
+					<a href="">加入我们</a>
+				</div>
+				<div class="col-md-6 map"><img src="static/img/map.png" alt="" /></div>
+			</div>
+		</div>
+		</div>
+		<div class="container footer">
+			<div class="row">
+				<h3>相关网站</h3>
+				<p>Related websites</p>
+				<ul>
+					<li><a href="">西可体育</a></li>
+					<li><a href="">上体传媒</a></li>
+					<li><a href="">社区公共体育设施</a></li>
+					<li><a href="">七人制足球赛</a></li>
+					<li><a href="">庐阳马拉松</a></li>
+					<li><a href="">游泳场馆查询</a></li>
+					<li><a href="">量山好汉</a></li>
+				</ul>
+			</div>
+		</div>
+</div>

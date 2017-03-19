@@ -1,0 +1,88 @@
+<div ng-controller="searchCtrl">
+        <div class="container sea">
+			<div class="row">
+				<div class="dropdown col-xs-2">
+					<button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" >
+				   		{{currentCity.city_name}}
+					    <span class="caret"></span>
+					</button>
+					    <ul class="dropdown-menu" >
+					  	<!--当单击列表时 单击的item 就是当前的城市-->
+					        <li ng-repeat="item in citys" 
+					        	ng-click="setCurrentCity(item)">{{item.city_name}}</li>
+					   
+					    </ul>
+				</div>
+				<div class="input-group col-xs-5 text-left search">
+				      <input type="text" class="form-control inp" placeholder="输入你要查询的场馆" ng-model="keyword">
+				      <span class="input-group-btn">
+				            <button class="btn glyphicon glyphicon-search" type="button" style="position: relative;top: 0;"></button>
+				      </span>
+			    </div>
+			</div>
+		</div>
+		<div class="container sortc searchOptions" style="border: 1px solid #ccc;">
+			<div class="row sort">
+				<div class="col-md-1">类别:</div>
+				<ul class="col-md-11 list-inline">
+					<li ng-click="searchInfo.category_id='';getStadiums();"
+						ng-class="{'active':searchInfo.category_id==''}">全部</li>
+					<li ng-repeat="item in searchOptions.categories"
+						ng-click="searchInfo.category_id=item.category_id;getStadiums();"
+						ng-class="{'active':searchInfo.category_id==item.category_id}">{{item.category_name}}</li>
+				</ul>
+			</div>
+			<div class="row sort">
+				<div class="col-md-1">区域:</div>
+				<ul class="col-md-11 list-inline">
+					<li ng-click="searchInfo.district_id='';getStadiums();"
+						ng-class="{'active':searchInfo.district_id==''}">全部</li>
+					<li ng-repeat="item in searchOptions.city_districts[0].districts"
+						ng-click="searchInfo.district_id=item.district_id;getStadiums();"
+						ng-class="{'active':searchInfo.district_id==item.district_id}">{{item.district_name}}</li>
+				</ul>
+			</div>
+			<div class="row sort">
+				<div class="col-md-1">商圈:</div>
+				<ul class="col-md-11 list-inline">
+					<li ng-click="searchInfo.cbd_id='';getStadiums();"
+						ng-class="{'active':searchInfo.cbd_id==''}">全部</li>
+					<li ng-repeat="item in searchOptions.city_cbds[0].cbds"
+						ng-click="searchInfo.cbd_id=item.cbd_id;getStadiums();"
+						ng-class="{'active':searchInfo.cbd_id==item.cbd_id}">{{item.cbd_name}}</li>
+				</ul>
+			</div>
+			<div class="row sort">
+				<div class="col-md-1">特色筛选:</div>
+				<ul class="col-md-11 list-inline">
+					<li ng-click="searchInfo.facility_id='';getStadiums();"
+						ng-class="{'active':searchInfo.facility_id==''}">全部</li>
+					<li ng-repeat="item in searchOptions.facilitys"
+						ng-click="searchInfo.facility_id=item.facility_id;getStadiums();"
+						ng-class="{'active':searchInfo.facility_id==item.facility_id}">{{item.facility_name}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+			    <div class="col-sm-6 col-md-4" ng-repeat="item in stadiums|filter:{searchInfo:keyword}">
+				    <div class="thumbnail">
+				        <img src="{{item.photo}}" alt="" style="width: 319px;height: 184px;">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p style="white-space: nowrap;">{{item.name}}</p>
+						        <p><star score="4"></star></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#/stadium/{{item.id}}" class="btn bk text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;background: #fff;">快速预定</a>
+					        </div>
+				        </div>
+				    </div>
+			    </div>
+		    </div>
+		</div>
+		<div class="container">
+			<div class="row text-center"><button class="btn btn-lg load" ng-click="loadMoreStadiums()">加载更多</button></div>
+		</div>
+</div>

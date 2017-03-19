@@ -1,0 +1,106 @@
+<div  ng-controller="stadiumCtrl">	
+	<div class="container">
+		<div class="row cons">
+			<div class="col-md-6">
+				<div class="row">
+					<img src="{{stadiumInfo.photo}}" alt="" class="ph"/>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="row stal">
+					<h3 class="name">{{stadiumInfo.name}}</h3>
+	                <p><span class="glyphicon glyphicon-map-marker"></span>{{stadiumInfo.address}}</p>
+				</div>
+				<div class="row">
+					<div class="col-md-6 text-center comment">
+						<star score="num"></star>{{num}}
+						<p>493条评论</p>
+					</div>
+					<div class="col-md-6 text-center comment adrress">
+						<p><span class="glyphicon glyphicon-earphone"></span>{{stadiumInfo.telephone}}</p>
+					</div>
+				</div>
+				<div class="row text-center collect">
+					<a href="" class="col-md-4"><img src="static/img/like.png" alt="" /></a>
+					<a href="" class="col-md-4"><img src="static/img/look.png" alt="" /></a>
+					<a href="" class="col-md-4"><img src="static/img/evaluate.png" alt="" /></a>
+				</div>
+				<div class="row phf">
+					<img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" />
+				</div>
+			</div>
+		</div>
+		<div class="row ubook">
+			<div class="col-md-9">
+				<div class="row week">
+					<div class="col-md-2" ng-repeat="item in datelist|limitTo:5">
+						<button ng-click="setDay(item)"
+							ng-class="{'btn-warning':currentDay==item}"
+							class="btn btn-block btn-default text-center">
+							{{item.w}}<br />{{item.d|date:'MM-dd'}}						
+						</button>
+					</div>
+					<div class="col-md-2">
+						<button class="btn btn-block btn-default text-center"><br />预定更多</button>
+					</div>
+				</div>
+				<div class="row sest">
+					<div class="row">
+						<div class="text-right clearfix">
+							<div class="text-center pull-right"><button class="btn btn-default col selected"><i class="glyphicon glyphicon-ok"></i></button><br />已选择场次</div>
+							<div class="text-center pull-right"><button class="btn btn-default col ordered active"></button><br />已占用</div>
+						    <div class="text-center pull-right"><button class="btn btn-default col"></button><br />可预定</div>
+						</div>
+					</div>		
+				    <div class="row time">					
+						<div class="col-md-1 no-padding">
+							<div class="col"></div>
+							<div class="field_name text-center" ng-repeat="item in stadiumFields ">{{item.field_name}}号场地</div>
+						</div>
+						<div class="col-md-11 field_wrapper no-padding">
+							<div ng-style="{'width':stadiumFields[0].field_resource.length*80+'px'}">
+								<button 
+									ng-repeat="item in stadiumFields[0].field_resource"
+									class="btn btn-default col btn-clear no-padding"
+									>{{item.start_period}}</button>
+							</div>
+							<div class="" ng-repeat="item in stadiumFields" ng-style="{'width':stadiumFields[0].field_resource.length*82+'px'}">
+								<button 
+									ng-click="setStatus(col,item.field_name)"
+									ng-class="{'active':col.resource_status=='ordered','selected':col.resource_status=='selected'}"
+									ng-repeat="col in item.field_resource"
+									class="btn btn-default col">						
+								<i ng-show="col.resource_status=='selected'" class="glyphicon glyphicon-ok ok"></i>
+								<span ng-show="col.resource_status=='free'">{{col.price/100}}</span></button>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="selected-wrap">					
+					<p ng-repeat="item in selectedFields" ng-if="selectedFields.length">
+						<button class="btn btn-default">{{item.start_period}}-{{item.end_period}} {{item.field_name}}号场地  {{item.price/100}}元</button>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="row comment" ng-repeat="item in user">
+			<div class="col-md-3">
+				<div class="user-photo col-md-4 no-padding"><img src="{{item.user.user_photo}}" alt="" /></div>
+				<div class="comment-user col-md-8">{{item.user.user_name}}<br/>
+					<div><img src="static/img/star1.png" alt="" /><img src="static/img/star1.png" alt="" /><img src="static/img/star1.png" alt="" /><img src="static/img/star1.png" alt="" /><img src="static/img/star2.png" alt="" /></div>
+				</div>
+			</div>
+			<div class="col-md-7 content-font" ng-if="!comment.showPartComment">{{item.comment}}</div>
+			<div class="col-md-2 text-right">{{item.creation_time | date:"yyyy-MM-dd HH:mm"}}</div>
+		</div>
+		<div class="row com">
+			<textarea  class="form-control col-md-12" rows="5" ng-model="item.userComments"></textarea>
+		</div>
+		<div class="row">
+			<div class="col-md-6 text-left">我要打分<star score="num"></star></div>
+			<div class="col-md-2 col-md-offset-4"><button type="submit">发表评论</button></div>
+		</div>
+	</div>
+</div>

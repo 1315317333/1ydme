@@ -1,0 +1,5 @@
+*{box-sizing: border-box;font-family: "微软雅黑";}
+			.registe div{color: #f4b21a;background: #fff;padding: 15px 0;font-size: 20px;margin-bottom: 30px;border-bottom: 1px solid #ccc;background: #f5f5f5;}
+			.registe div:hover{background: #fff;}
+			.enter{height: 490px;border: 1px solid #ccc;background: #fff;}
+			.subm{border: none;background: #f4b21a;color: #fff;height: 50px;font-size: 20px;}

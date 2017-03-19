@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrol">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" href="static/css/bootstrap.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="static/css/exsise.css" />
+		<link rel="stylesheet" href="static/css/book.css" />
+		<link rel="stylesheet" href="static/css/enter.css" />
+	</head>
+	<body>
+		<div class="nav navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<div class="navbar-brand">
+						<a href=""><img height="30" src="static/img/logo .png" alt="" /></a>
+					</div>					
+				</div>
+				<div class="navbar-right">
+						<ul class="nav navbar-nav">
+							<li><a href="#home" ng-class="{'active':pageNum==1}">首页</a></li>
+							<li><a href="#search" ng-class="{'active':pageNum==2}">订场</a></li>
+							<li><a href="" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn">赛事</a></li>
+							<li><a href="">培训</a></li>
+							<li><a href="">登录</a></li>
+							<li><a href="#regist" ng-class="{'active':pageNum==3}">注册</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+		<div ng-view></div>
+		<div class="container-fluid foot" style="background-image: url(static/img/footer.png);padding: 30px;position: relative;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<h3 style="color: #fff;">联系</h3>
+						<p>contact</p>
+						<p style="color: #f4b21a;padding: 10px 0;font-size: 16px;">公司：上海天健体育科技发展有限公司</p>
+						<p>地址：上海市淞沪路161号中环国际大厦14楼</p>
+						<p>客服电话：400-921-6990</p>
+						<p>合作邮箱：app@1yd.me</p>
+						<p>加盟热线：400-921-6990（ 7*12小时在线，9点至21点 ）</p>
+						<p>微信公众号：我要运动（ 关注微信公众号，点击在线客服进行咨询 ）</p>
+						<p>邮箱：houping@1yd.me</p>
+						<p> 版权所有：上海天健体育科技发展有限公司 沪ICP备14034023号-1 </p>
+						<img src="static/img/weixin.jpg" alt="" style="position: absolute;top: 50px;left: 300px;width: 100px;height: 100px;"/>
+						<img src="static/img/lz.png" alt="" style="position: absolute;top: 290px;left: 400px;width: 30px;height: 35px;"/>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="sub pull-right">
+							
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">姓名：</div>
+									<div class="col-md-8 col-sm-8 right"><input type="text" class=" form-control"/></div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">邮箱：</div>
+									<div class="col-md-8 col-sm-8 right"><input type="email" class="form-control"/></div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">电话：</div>
+									<div class="col-md-8 col-sm-8 right"><input type="text" class="form-control"/></div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">备注：</div>
+									<div  class="col-md-8 col-sm-8 right"><textarea class="form-control" placeholder="网站还有许多不足和待完善的地方，欢迎小伙伴提出宝贵的意见和建议！:)(必填)"></textarea></div>
+								</div>
+								<div class="row col-md-10 col-md-offset-1"><input type="submit" value="提交" class="form-control submit"/></div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="static/js/angular.min.js"></script>
+	<script src="static/js/jquery-2.0.0.min.js"></script>
+	<script src="static/js/bootstrap.js"></script>
+	<script src="static/js/angular-animate.min.js"></script>
+	<script src="static/js/angular-route.js"></script>
+	<script src="static/js/app.js"></script>
+	<script src="static/js/star.js"></script>
+</html>

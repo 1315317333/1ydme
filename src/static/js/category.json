@@ -1,0 +1,128 @@
+[
+  {
+    "category_bg_img": "images/tennis.jpg",
+    "category_thum_img": "images/icon/icon-tennis.png",
+    "category_id": 1,
+    "category_name": "网球",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00N"
+  },
+  {
+    "category_bg_img": "images/badminton.jpg",
+    "category_thum_img": "images/icon/icon-badminton.png",
+    "category_id": 2,
+    "category_name": "羽毛球",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00O"
+  },
+  {
+    "category_bg_img": "images/table_tennis.jpg",
+    "category_thum_img": "images/icon/icon-table-tennis.png",
+    "category_id": 21,
+    "category_name": "乒乓球",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00P"
+  },
+  {
+    "category_bg_img": "images/basketball.jpg",
+    "category_thum_img": "images/icon/icon-basketball.png",
+    "category_id": 61,
+    "category_name": "篮球",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00Q"
+  },
+  {
+    "category_bg_img": "images/football.jpg",
+    "category_thum_img": "images/icon/icon-football.png",
+    "category_id": 23,
+    "category_name": "足球",
+    "category_view": "<h1>运动心得</h1><p>@我要运动</p><p>每一次在场上的奔跑或是场下的呐喊，都会让我血管贲张，血液沸腾到极点。每一次的冲锋，每一次的扑救，每一次的过人，每一次精彩的射门都寄托着我与我的队友们的期盼与热情。</p>",
+    "isActive": false,
+    "$$hashKey": "00R"
+  },
+  {
+    "category_bg_img": "images/squash.jpg",
+    "category_thum_img": "images/icon/icon-squash.png",
+    "category_id": 81,
+    "category_name": "壁球",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00S"
+  },
+  {
+    "category_bg_img": "images/billiards.jpg",
+    "category_thum_img": "images/icon/icon-9-Ball.png",
+    "category_id": 83,
+    "category_name": "桌球",
+    "category_view": "<h1>运动心得</h1><p>@我要运动</p><p>斯诺克跟八球不一样，有人会问：斯诺克的精髓是什么？<br>这个问题每个人有每个人的见解，而且我认为它的精髓就在于对球的控制力！ </p>",
+    "isActive": false,
+    "$$hashKey": "00T"
+  },
+  {
+    "category_bg_img": "images/swimming.jpg",
+    "category_thum_img": "images/icon/icon-swimming.png",
+    "category_id": 84,
+    "category_name": "游泳",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00U"
+  },
+  {
+    "category_bg_img": "images/home.jpg",
+    "category_thum_img": "",
+    "category_id": 110,
+    "category_name": "社区健身苑点",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00V"
+  },
+  {
+    "category_bg_img": "images/home.jpg",
+    "category_thum_img": "",
+    "category_id": 111,
+    "category_name": "社区公共运动场",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00W"
+  },
+  {
+    "category_bg_img": "images/home.jpg",
+    "category_thum_img": "",
+    "category_id": 112,
+    "category_name": "农民健身工程",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00X"
+  },
+  {
+    "category_bg_img": "images/home.jpg",
+    "category_thum_img": "",
+    "category_id": 114,
+    "category_name": "百姓健身房",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00Y"
+  },
+  {
+    "category_bg_img": "images/home.jpg",
+    "category_thum_img": "",
+    "category_id": 115,
+    "category_name": "百姓游泳池",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "00Z"
+  },
+  {
+    "category_bg_img": "images/home.jpg",
+    "category_thum_img": "",
+    "category_id": 116,
+    "category_name": "全民健身活动中心",
+    "category_view": "<h1>我要运动 要运动点我</h1><br><p>在这普大喜奔,万众瞩目的时刻,酝酿已久的\"我要运动\"网站,终于破茧而出!</p><p>从此妈妈再也不用担心我运动订不到场地了!</p>",
+    "isActive": false,
+    "$$hashKey": "010"
+  }
+]

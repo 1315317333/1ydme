@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="mainCtrol">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="static/css/bootstrap.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="static/css/book.css" />
+	</head>
+	<body>
+		<div class="nav navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<div class="navbar-brand">
+						<a href=""><img height="30" src="static/img/logo .png" alt="" /></a>
+					</div>					
+				</div>
+				<div class="navbar-right">
+						<ul class="nav navbar-nav">
+							<li><a href="#home" ng-class="{'active':pageNum==1}">首页</a></li>
+							<li><a href="#search" ng-class="{'active':pageNum==2}">订场</a></li>
+							<li><a href="" data-toggle="modal" data-target=".bs-example-modal-lg" class="btn">赛事</a></li>
+							<li><a href="">培训</a></li>
+							<li><a href="">登录</a></li>
+							<li><a href="#regist" ng-class="{'active':pageNum==3}">注册</a></li>
+						</ul>
+				</div>
+				<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header text-center">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						       <img src="{{item.DefaultImage}}" alt="" class=""/>
+						      </div>
+						      <div class="modal-body">
+						        ...
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-primary">Save changes</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>-->
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="dropdown col-xs-2">
+					  <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    上海市
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+					    <li><a href="#">上海市</a></li>
+					    <li><a href="#">南京市</a></li>
+					    <li><a href="#">苏州市</a></li>
+					    <li><a href="#">宁波市</a></li>
+					    <li><a href="#">合肥市</a></li>
+					    <li><a href="#">吉安市</a></li>
+					    <li><a href="#">济南市</a></li>
+					  </ul>
+				</div>
+				<div class="input-group col-xs-5 text-left search">
+				      <input type="text" class="form-control inp" placeholder="输入你要查询的场馆">
+				      <span class="input-group-btn">
+				            <button class="btn glyphicon glyphicon-search" type="button" style="position: relative;top: 0;"></button>
+				      </span>
+			    </div>
+			</div>
+		</div>
+		<div class="container sortc" style="border: 1px solid #ccc;">
+			<div class="row sort">
+				<div class="col-md-1 text-center">
+					类别：
+				</div>
+				<div class="col-md-11">
+					<a href="" ng-repeat="item in categoryName">全部</a>
+					
+				</div>
+			</div>
+			<div class="row sort">
+				<div class="col-md-1 text-center">
+					区域：
+				</div>
+				<div class="col-md-11">
+					<a href="">全部</a>
+							
+				</div>
+			</div>
+			<div class="row sort">
+				<div class="col-md-1 text-center">
+					商圈：
+				</div>
+				<div class="col-md-11">
+					<a href="">全部</a>
+					
+				</div>
+			</div>
+			<div class="row sort">
+				<div class="col-md-1 text-center">
+					特色筛选：
+				</div>
+				<div class="col-md-11">
+					<a href="">全部</a>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+			    <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				        <img src="static/img/q1.jpg" alt="">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>桃浦全民健身中心游泳馆</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+				    </div>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+				        <img src="static/img/q2.jpg" alt="" style="height: 202px;width: 338px;">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>鸿飞运动城足球馆</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+			        </div>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				        <img src="static/img/q3.jpg" alt="">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>桃浦全民健身中心乒乓球馆</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+				    </div>
+			    </div>
+		
+			    <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				        <img src="static/img/q4.jpg" alt="" style="height: 202px;width: 338px;">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>高行桌球</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+				    </div>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				        <img src="static/img/q5.jpg" alt="" style="height: 202px;width: 338px;">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>佛雷斯羽毛球馆</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+				    </div>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				        <img src="static/img/q6.jpg" alt="" style="height: 202px;width: 338px;">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>横沙岛卡丁车</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+				    </div>
+			    </div>
+		
+			    <div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				        <img src="static/img/q7.jpg" alt="" style="height: 202px;width: 338px;">
+				        <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>横沙岛网球场</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+				    </div>
+			    </div>
+			    <div class="col-sm-6 col-md-4">
+			    	<div class="thumbnail">
+				       <img src="static/img/q8.jpg" alt="" style="height: 202px;width: 338px;">
+				       <div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>盛力瑛才击剑壁球运动</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				        </div>
+			        </div>
+			    </div>
+			  	<div class="col-sm-6 col-md-4">
+			        <div class="thumbnail">
+				      	<img src="static/img/q9.jpg" alt="" style="height: 202px;width: 338px;">
+				      	<div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>望顶台球（九球）</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span> <a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				      	</div>
+			    	</div>
+			    </div>
+			
+				<div class="col-sm-6 col-md-4">
+				    <div class="thumbnail">
+				      	<img src="static/img/q10.jpg" alt="" style="height: 202px;width: 338px;">
+				      	<div class="caption row">
+					      	<div class="col-md-8 col-sm-8 col-xs-8">
+						        <p>跆极道馆(跆拳道体验券)</p>
+						        <p><img src="static/img/xxz.png" alt="" /></p>
+						        <p><img src="static/img/WIFI.png" alt="" /><img src="static/img/bath.png" alt="" /><img src="static/img/park.png" alt="" /><img src="static/img/fitting.png" alt="" /><img src="static/img/kit.png" alt="" /></p>
+					        </div>
+					        <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+					        	<span style="color: #fa4306;font-size: 30px;" class="text-right">￥40.0</span><a href="#" class="btn book text-right" role="button" style="border: 1px solid #f4b21a;color: #f4b21a;">快速预定</a>
+					        </div>
+				      	</div>
+				    </div>
+			    </div>
+		    </div>
+		</div>
+		<div class="container">
+			<div class="row text-center"><button class="btn btn-lg load">加载更多</button></div>
+		</div>
+		<div class="container-fluid foot" style="background-image: url(static/img/footer.png);padding: 30px;position: relative;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<h3 style="color: #fff;">联系</h3>
+						<p>contact</p>
+						<p style="color: #f4b21a;padding: 10px 0;font-size: 16px;">公司：上海天健体育科技发展有限公司</p>
+						<p>地址：上海市淞沪路161号中环国际大厦14楼</p>
+						<p>客服电话：400-921-6990</p>
+						<p>合作邮箱：app@1yd.me</p>
+						<p>加盟热线：400-921-6990（ 7*12小时在线，9点至21点 ）</p>
+						<p>微信公众号：我要运动（ 关注微信公众号，点击在线客服进行咨询 ）</p>
+						<p>邮箱：houping@1yd.me</p>
+						<p> 版权所有：上海天健体育科技发展有限公司 沪ICP备14034023号-1 </p>
+						<img src="static/img/weixin.jpg" alt="" style="position: absolute;top: 50px;left: 300px;width: 100px;height: 100px;"/>
+						<img src="static/img/lz.png" alt="" style="position: absolute;top: 290px;left: 400px;width: 30px;height: 35px;"/>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-12">
+						<div class="sub pull-right">
+							
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">姓名：</div>
+									<div class="col-md-8 col-sm-8 right"><input type="text" class=" form-control"/></div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">邮箱：</div>
+									<div class="col-md-8 col-sm-8 right"><input type="email" class="form-control"/></div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">电话：</div>
+									<div class="col-md-8 col-sm-8 right"><input type="text" class="form-control"/></div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-sm-2 col-md-offset-1 text-right" style="padding: 0;">备注：</div>
+									<div  class="col-md-8 col-sm-8 right"><textarea class="form-control" placeholder="网站还有许多不足和待完善的地方，欢迎小伙伴提出宝贵的意见和建议！:)(必填)"></textarea></div>
+								</div>
+								<div class="row col-md-10 col-md-offset-1"><input type="submit" value="提交" class="form-control submit"/></div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="static/js/jquery-2.0.0.min.js"></script>
+    <script src="static/js/bootstrap.js"></script>
+    <script src="static/js/angular.min.js"></script>
+    
+</html>
